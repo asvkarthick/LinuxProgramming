@@ -8,7 +8,7 @@ char* basename(char* str)
     if(len > 0) {
         strend = str + len - 1;
         while(*strend != '/' && strend != str) strend--;
-        strend++;
+        if(strend != str) strend++;
     }
     return strend;
 }
